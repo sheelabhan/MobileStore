@@ -12,7 +12,8 @@ import android.widget.TextView;
 
 public class Login extends AppCompatActivity {
     private EditText etUserName, etPassword;
-    private Button btnLogin,btnRegister;
+    private Button btnLogin;
+    private TextView txtRegister;
 
 
 
@@ -22,15 +23,27 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         etUserName=findViewById(R.id.etUserName);
         etPassword=findViewById(R.id.etPassword);
-        btnRegister=findViewById(R.id.btnRegister);
+        txtRegister=findViewById(R.id.txtRegister);
         btnLogin=findViewById(R.id.btnLogin);
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(TextUtils.isEmpty(etUserName.getText()))
+                {
+                    etUserName.setError("Please enter first no");
+                    etUserName.requestFocus();
+                    return;
 
+                }
+                else  if(TextUtils.isEmpty(etPassword.getText())) {
+                    etPassword.setError("Please enter second no");
+                    etPassword.requestFocus();
+                    return;
+
+                }
             }
         });
-      btnRegister.setOnClickListener(new View.OnClickListener() {
+      txtRegister.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View v) {
 

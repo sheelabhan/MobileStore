@@ -12,11 +12,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class SignUp extends AppCompatActivity {
-    private EditText etFullName, etUserName, etEmail, etPassword, etConfirmPassword;
-    private TextView etGender;
-    private RadioButton rdoMale, rdoFemale;
+    private EditText etFullName, etUserName, etEmail, etPassword,etConfirmPassword,etPhoneNo;
+
     private Button btnRegister;
-    DatabaseHelper myDb;
+
 
 
     @Override
@@ -28,27 +27,18 @@ public class SignUp extends AppCompatActivity {
         etEmail = findViewById(R.id.etEmail);
         etPassword = findViewById(R.id.etPassword);
         etConfirmPassword = findViewById(R.id.etConfirmPassword);
-        etGender = findViewById(R.id.etGender);
-        rdoMale=findViewById(R.id.rdoMale);
-        rdoFemale=findViewById(R.id.rdoFemale);
-        btnRegister=findViewById(R.id.btnRegister);
+        etPhoneNo=findViewById(R.id.etPhoneNo);
+        btnRegister = findViewById(R.id.btnRegister);
 
-        myDb= new DatabaseHelper(this);
+
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-             boolean insertData=   myDb.insertData(etFullName.getText().toString(),etUserName.getText().toString(),
-                     etEmail.getText().toString(),etPassword.getText().toString(),etConfirmPassword.getText().toString(),
-                     etGender.getText().toString());
-             if(insertData=true)
-                 Toast.makeText(SignUp.this,"Data Inserted",Toast.LENGTH_LONG).show();
-              else
-                 Toast.makeText(SignUp.this,"Data is not Inserted",Toast.LENGTH_LONG).show();
-                Intent Loginintent= new Intent(SignUp.this, Login.class);
+
+                Intent Loginintent = new Intent(SignUp.this, Login.class);
                 startActivity(Loginintent);
             }
         });
-
 
 
     }

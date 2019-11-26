@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#FFB6C1"
     tools:context=".SignUp">
 
     <EditText
@@ -13,6 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="30sp"
+        android:layout_marginTop="20dp"
         android:hint="Full Name"/>
     <EditText
         android:id="@+id/etUserName"
@@ -20,6 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="30sp"
+        android:layout_marginTop="20dp"
         android:hint="User Name"/>
 
     <EditText
@@ -27,6 +30,7 @@
         android:inputType="text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:textSize="30sp"
         android:hint="Email"/>
     <EditText
@@ -35,49 +39,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="30sp"
+        android:layout_marginTop="20dp"
         android:hint="Password"/>
     <EditText
         android:inputType="textPassword"
         android:id="@+id/etConfirmPassword"
         android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
         android:layout_height="wrap_content"
         android:textSize="30sp"
         android:hint="Confirm Password"/>
 
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    <TextView
-        android:id="@+id/etGender"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="Gender"
-        android:textSize="30sp" />
-
-
-
-    <RadioButton
-            android:id="@+id/rdoMale"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="Male"
-            android:textSize="30sp" />
-
-        <RadioButton
-            android:id="@+id/rdoFemale"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Female"
-            android:textSize="30sp" />
+   <EditText
+       android:id="@+id/etPhoneNo"
+       android:inputType="number"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="Phone Number"
+       android:layout_marginTop="20dp"
+       android:textSize="30sp"/>
 
         <Button
             android:id="@+id/btnRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="top"
+            android:layout_marginTop="25dp"
             android:text="Register"
-            android:textSize="30dp" />
-    </RadioGroup>
+            android:textSize="25dp" />
+
 
 </LinearLayout>
